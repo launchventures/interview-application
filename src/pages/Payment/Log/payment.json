@@ -1,0 +1,78 @@
+{
+    "paymentDetails": {
+        "raBillNumber": 4,
+        "invoiceNumber": "TPL-01-WDB-004",
+        "paymentRecieved": "$ 0.00",
+        "paymentStatus": "N/A"
+    },
+    "projectDetails": {
+        "projectName": "Liberty Park Estates",
+        "projectCode": "TPL-01",
+        "clientName": "Liberty Builders Inc.",
+        "contractValue": "$630,500",
+        "contractType": "Item Rate"
+    },
+    "billDetails": {
+        "billNumber": "TPL-01-WDB-004",
+        "billPeriod": "April-01-2023 to April-30-2023",
+        "billDate": "April-30-2023",
+        "billType": "Work Done"
+    },
+    "previousInvoices": {
+        "billsRaised": {
+            "count": 3,
+            "value": "$ 74,000.00"
+        },
+        "billsApproved": {
+            "count": 2,
+            "value": "$ 67,000.00"
+        },
+        "draftInvoices": {
+            "count": 1,
+            "value": "$ 7,000.00"
+        }
+    },
+    "bankDetails": {
+        "bankName": "American Bank",
+        "bankAddress": "Maryland, USA",
+        "accountNumber": "5574 3570 1146 2945",
+        "routingNumber": "51408868"
+    },
+    "generalDetails": {
+        "invoiceSubmissionDate": "May-02-2023",
+        "invoiceDate": "May-02-2023"
+    },
+    "invoiceDetails": {
+        "originalContractSum": "$ 630, 500.00",
+        "netChangeByChangeOrders": "$ 700.00",
+        "contractSumToDate": "$ 631, 200.00",
+        "totalCompletedStoredToDate": "$ 74,000.00",
+        "totalDeduction": "$ 8,437.50",
+        "deduction": "$ 4,687.50",
+        "totalEarnedLessRetainage": "$ 65,562.50",
+        "lessPreviousCertificatesForPayment": "$ 67,000.00",
+        "currentPaymentDue": "$ 56,696.16",
+        "balanceToFinishIncludingRetainage": "$ 565,637.50",
+        "taxAmount": "$ 4,687.50",
+        "netBillAmount": "$ 61,383.66"
+    },
+    "changeOrderDeatils": {
+        "totalChangesApprovedLastMonths": {
+            "additions": "$ 400",
+            "deductions": "$ 100"
+        },
+        "totalApprovedCurrentMonth": {
+            "additions": "$ 500",
+            "deductions": "$ 100"
+        },
+        "total": {
+            "additions": "$ 900",
+            "deductions": "$ 200"
+        },
+        "netChangesByChangeOrder": {
+            "additions": "$ 700",
+            "deductions": ""
+        }
+    },
+    "remarks": "The hard rock excavation work continued through the month of April. There was steady progress despite pockets of higher than anticipated strength rock. Given the untimely snow fall on 15 April, there was some delay in the overall work. "
+}
