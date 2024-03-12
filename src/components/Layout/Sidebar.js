@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import {Link} from "react-router-dom";
-import {leftArrowIcon,dashboardIcon,projectsIcon} from "utils/Icons";
+import {leftArrowIcon, projectsIcon, SettingsIcon, FolderIcon, HomeIcon} from "utils/Icons";
 
 const Sidebar = ({page,currentUser,isShowSidebar,toggleSidebar}) => {
     return (
@@ -10,9 +10,16 @@ const Sidebar = ({page,currentUser,isShowSidebar,toggleSidebar}) => {
             </button>
             <ul className="biSidebar">
                 <li className="biList">
-                    <Link to="/dashboard" className="biLink active">
-                        {dashboardIcon({width:20,height:20,fill:"#8da3b6"})}
+                    <Link to="/dashboard" className="biLink">
+                        <HomeIcon />
                         <span>Dashboard</span>
+                    </Link>
+                </li>
+             
+                <li className="biList">
+                    <Link to="/payment-log" className="biLink">
+                        <FolderIcon />
+                        <span>Payment Log</span>
                     </Link>
                 </li>
                 <li className="biList">
@@ -21,23 +28,23 @@ const Sidebar = ({page,currentUser,isShowSidebar,toggleSidebar}) => {
                         <span>All Clients</span>
                     </Link>
                 </li>
-                <li className="biList">
+                {/* <li className="biList">
                     <Link to="/add-clients" className="biLink">
                         {dashboardIcon({width:20,height:20,fill:"#8da3b6"})}
                         <span>Register Clients</span>
                     </Link>
-                </li>
-                <li className="biList">
+                </li> */}
+                {/* <li className="biList">
                     <Link to="/add-clients" className="biLink">
                         {dashboardIcon({width:20,height:20,fill:"#8da3b6"})}
                         <span>View Clients</span>
                     </Link>
-                </li>
+                </li> */}
             </ul>
             <ul className="biSidebar">
                 <li className="biList">
                     <Link to="/settings" className="biLink">
-                        {dashboardIcon({width:20,height:20,fill:"#8da3b6"})}
+                        <SettingsIcon />
                         <span>Settings</span>
                     </Link>
                 </li>
