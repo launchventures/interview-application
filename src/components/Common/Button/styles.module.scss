@@ -1,0 +1,20 @@
+.button {
+    background: transparent;
+    padding: 12px 20px;
+    border: 0;
+    font-weight: 600;
+    display: inline-block;
+
+    &.theme {
+        &-alpha {
+            background-color: var(--btn-bg-alpha);
+            color: white;
+            border: 2px solid #256eb5;
+        }
+        &-beta {
+            background-color: var(--btn-bg-beta);
+            color: var(--font-color-gamma);
+            border: 2px solid #256eb5;
+        }
+    }
+}
