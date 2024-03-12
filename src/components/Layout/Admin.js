@@ -17,7 +17,7 @@ const AdminLayout = (props) => {
                 )}
                 <Sidebar page={props.page} currentUser={props.currentUser} isShowSidebar={isShowSidebar} toggleSidebar={toggleSidebar}/>
                 <div className={`adminLayoutInner ${isShowSidebar ? "marginLeft" : ""}`}>
-                    <Header currentUser={props.currentUser}/>
+                    <Header currentUser={props.currentUser} toggleSidebar={toggleSidebar}/>
                     <div className="layoutContent">{props.children}</div>
                 </div>
             </div>
