@@ -9,7 +9,12 @@ body{overflow-x:hidden;overflow-y:auto;}
 
 /* SideBar CSS */
 .adminLayoutWrap .biSidebarWrap{width:100%;max-width:90px;padding:120px 20px 50px;background:#002850;display:flex;flex-direction:column;row-gap:20px;justify-content:space-between;position:relative;z-index:999;}
-.adminLayoutWrap .biSidebarWrap .arrowBtn{width:32px;height:32px;border-radius:100%;background:#002850;border:1px solid #fff;display:flex;align-items:center;justify-content:center;cursor:pointer;position:absolute;top:70px;right:-16px;}
+@media (max-width: 575.98px) {
+  .adminLayoutWrap .biSidebarWrap {position: fixed;top: 0;bottom: 0;left: -110px;}
+  .adminLayoutWrap .biSidebarWrap.hide {left: 0;}
+}
+.adminLayoutWrap .biSidebarWrap .arrowBtn{width:32px;height:32px;border-radius:100%;background:#002850;border:2px solid #fff;display:flex;align-items:center;justify-content:center;cursor:pointer;position:absolute;top:70px;right:-16px; transform: rotate(180deg);}
+.adminLayoutWrap .biSidebarWrap.hide .arrowBtn{transform: rotate(0);}
 .adminLayoutWrap .biSidebarWrap .biSidebar{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;row-gap:15px;}
 .adminLayoutWrap .biSidebarWrap .biSidebar .biList .biLink{display:flex;align-items:center;column-gap:10px;height:45px;padding:0 15px;transition:.1s;position:relative;}
 .adminLayoutWrap .biSidebarWrap .biSidebar .biList .biLink span{display:none;}
@@ -31,35 +36,30 @@ body{overflow-x:hidden;overflow-y:auto;}
 
 /* Dashboard Header CSS */
 .adminLayoutWrap .adminLayoutInner .biHeader{display:flex;align-items:center;column-gap:20px;justify-content:space-between;padding:20px 30px;position:fixed;z-index:99;background:#f5fbfd;left:90px;right:0;}
-.adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav{padding:0;margin:0;list-style:none;display:flex;align-items:center;column-gap:15px;}
+.adminLayoutWrap .adminLayoutInner .biHeader .list-icon {display: none;}
+@media (max-width: 575.98px) {
+  .adminLayoutWrap .adminLayoutInner .biHeader {left: 0;padding-left: 15px;padding-right: 15px;}
+  .adminLayoutWrap .adminLayoutInner .biHeader .logo {display: none;}
+  .adminLayoutWrap .adminLayoutInner .biHeader .list-icon {cursor: pointer;display: block;}
+  .adminLayoutWrap .adminLayoutInner .biHeader .list-icon svg {width: 30px;height: auto;color: var(--font-color-gamma);border-radius: 4px;border: 0.5px solid var(--font-color-gamma);box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.0784313725);}
+}
+.adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav{padding:0;margin:0;list-style:none;display:flex;align-items:center;column-gap:16px;}
 .adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biList{cursor:pointer;}
-.adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser{margin-left:10px;cursor:pointer;}
+.adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser{margin-left:10px;}
 .adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser .biUserWrap{display:flex;align-items:center;column-gap:10px;}
 .adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser .biUserWrap .biUserImg{width:38px;height:38px;object-fit:cover;border-radius:100%;overflow:hidden;}
 .adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser .biUserWrap .biUserNameWrap .biUserName{font-size:16px;font-weight:600;color:#424750;}
 .adminLayoutWrap .adminLayoutInner .biHeader .biHeaderNav .biUser .biUserWrap .biUserNameWrap .biUserRole{font-size:12px;color:#424750;}
-
+.biUserNameWrap {line-height: 18px;}
+@media (max-width: 575.98px) {
+  .biUserNameWrap {display: none;}
+}
 
 /* Dashboard layout CSS */
-.adminLayoutInner .layoutContent{padding:20px 30px;display:flex;margin:82px 0 0;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+.adminLayoutInner .layoutContent{padding:20px 30px;margin:82px 0 0; position: relative; min-height: calc(100% - 82px);}
+@media (max-width: 575.98px) {
+  .adminLayoutInner .layoutContent {padding-left: 15px;padding-right: 15px;}
+}
   .heading-400-14 {
     font-size: 14px;
     font-weight: 400;
@@ -399,9 +399,9 @@ body{overflow-x:hidden;overflow-y:auto;}
     scrollbar-width: thin;
   }
   
-  .card-body {
+  /* .card-body {
     margin-bottom: 55px !important;
-  }
+  } */
   
   .svg-dropdown {
     position: absolute;

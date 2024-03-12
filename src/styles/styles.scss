@@ -1,0 +1,142 @@
+:root {
+    --font-color-alpha: #424750;
+    --font-color-beta: #7c7d7e;
+    --font-color-gamma: #256eb5;
+    --btn-bg-alpha: #256eb5;
+    --btn-bg-beta: #f7fbfb;
+
+    --font-size-base: 16px;
+}
+
+html {
+    font-size: var(--font-size-base);
+}
+
+.font {
+    &-sm {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &-base {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.text {
+    &-color {
+        &-alpha {
+            color: var(--font-color-alpha);
+        }
+        &-beta {
+            color: var(--font-color-beta);
+        }
+        &-gamma {
+            color: var(--font-color-gamma);
+        }
+    }
+}
+
+.font {
+    &-400 {
+        font-weight: 400;
+    }
+    &-600 {
+        font-weight: 600;
+    }
+}
+
+body {
+    font-weight: 400;
+    @extend .text-color-alpha;
+    @extend .font-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    @extend .text-color-gamma;
+}
+
+.breadcrumb-item {
+    @extend .text-color-beta;
+
+    &.active {
+        color: #256eb5;
+        font-weight: 700;
+
+        &::before {
+            font-weight: normal;
+        }
+    }
+
+    & + .breadcrumb-item::before {
+        content: ">";
+        @extend .text-color-gamma;
+    }
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+
+    &-header {
+        background-color: #e6f4fa;
+        border: 0;
+        padding: 12px 16px;
+        font-weight: 600;
+        @extend .text-color-alpha;
+
+        &:first-child {
+            border-radius: 0;
+        }
+    }
+
+    &-body {
+        padding: 12px 16px;
+        @extend .font-sm;
+        @extend .text-color-alpha;
+    }
+
+    &-theme {
+        &-alpha {
+            box-shadow: 0px 4px 8px 0px #00000014;
+        }
+        &-beta {
+            box-shadow: 0px 4px 16px 0px #0b0b0b1f;
+        }
+    }
+
+    &-with-padding {
+        padding: 20px 24px;
+    }
+}
+
+.dropdown-item {
+    @extend .text-color-alpha;
+}
+
+table.payment-table {
+    width: 100%;
+    tr {
+        td {
+            padding: 10px 2px;
+            vertical-align: top;
+            min-width: 100px;
+        }
+    }
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+.overflow {
+    &-auto {
+        overflow: auto;
+    }
+}
+.opacity-60 {
+    opacity: 60%;
+}
